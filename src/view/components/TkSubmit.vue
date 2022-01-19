@@ -244,7 +244,7 @@ export default {
       const fileIndex = `${Date.now()}-${userId}`
       const fileName = nameSplit.join('.')
       this.paste(this.getImagePlaceholder(fileIndex, fileType))
-      if (this.config.IMAGE_CDN === '7bu' && this.config.IMAGE_CDN_TOKEN) {
+      if (this.config.IMAGE_CDN === 'HR' && this.config.IMAGE_CDN_TOKEN) {
         this.uploadPhotoToThirdParty(fileIndex, fileName, fileType, photo, 'https://img.huran.xyz/api/upload')
       } else if (this.$tcb) {
         this.uploadPhotoToQcloud(fileIndex, fileName, fileType, photo)
